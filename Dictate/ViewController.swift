@@ -80,7 +80,7 @@ class ViewController: UIViewController, G8TesseractDelegate {
         
         if let tesseract = G8Tesseract(language: "\(selectedLanguage)") {
             tesseract.delegate = self
-            tesseract.image = UIImage(named: "testPoem")?.g8_blackAndWhite()
+            tesseract.image = UIImage(named: "\(sessionOutput)")?.g8_blackAndWhite()
             tesseract.recognize()
             
             let recognizedText = tesseract.recognizedText
