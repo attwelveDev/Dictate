@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1EB07C5B583A186B9C4DFFC8 /* Pods_Dictate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */; };
+		2AA78A6CDEE6FB49F7028EB0 /* Pods_DictateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB0C17DD1D012FC05272A5 /* Pods_DictateUITests.framework */; };
+		5F7F436668669D5FDA1D66DA /* Pods_DictateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */; };
 		93E4B9261E3A12B700E4267A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B9251E3A12B700E4267A /* AppDelegate.swift */; };
 		93E4B9281E3A12B700E4267A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B9271E3A12B700E4267A /* ViewController.swift */; };
 		93E4B92B1E3A12B700E4267A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E4B9291E3A12B700E4267A /* Main.storyboard */; };
@@ -34,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		32BE3ABE90C3B53CA548B9AE /* Pods-DictateTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictateTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DictateTests/Pods-DictateTests.release.xcconfig"; sourceTree = "<group>"; };
+		37124BB5B901A4728F043314 /* Pods-Dictate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dictate/Pods-Dictate.debug.xcconfig"; sourceTree = "<group>"; };
+		79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dictate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8546639B7D52DFDA037AF50A /* Pods-Dictate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dictate/Pods-Dictate.release.xcconfig"; sourceTree = "<group>"; };
+		86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DictateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E4B9221E3A12B700E4267A /* Dictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E4B9251E3A12B700E4267A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E4B9271E3A12B700E4267A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +55,10 @@
 		93E4B9411E3A12B700E4267A /* DictateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DictateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E4B9451E3A12B700E4267A /* DictateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictateUITests.swift; sourceTree = "<group>"; };
 		93E4B9471E3A12B700E4267A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98906972CA068FC5981AC630 /* Pods-DictateUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictateUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DictateUITests/Pods-DictateUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9B41F6893A5400551EB1F94B /* Pods-DictateUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictateUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DictateUITests/Pods-DictateUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9EAB0C17DD1D012FC05272A5 /* Pods_DictateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DictateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6B5465FC85B84C253DB0694 /* Pods-DictateTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DictateTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DictateTests/Pods-DictateTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EB07C5B583A186B9C4DFFC8 /* Pods_Dictate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F7F436668669D5FDA1D66DA /* Pods_DictateTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +82,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AA78A6CDEE6FB49F7028EB0 /* Pods_DictateUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		687B6615E99DD449ADE81D8E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				37124BB5B901A4728F043314 /* Pods-Dictate.debug.xcconfig */,
+				8546639B7D52DFDA037AF50A /* Pods-Dictate.release.xcconfig */,
+				A6B5465FC85B84C253DB0694 /* Pods-DictateTests.debug.xcconfig */,
+				32BE3ABE90C3B53CA548B9AE /* Pods-DictateTests.release.xcconfig */,
+				98906972CA068FC5981AC630 /* Pods-DictateUITests.debug.xcconfig */,
+				9B41F6893A5400551EB1F94B /* Pods-DictateUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79C389D611FD73C5E75FB523 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */,
+				86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */,
+				9EAB0C17DD1D012FC05272A5 /* Pods_DictateUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		93E4B9191E3A12B700E4267A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +119,8 @@
 				93E4B9391E3A12B700E4267A /* DictateTests */,
 				93E4B9441E3A12B700E4267A /* DictateUITests */,
 				93E4B9231E3A12B700E4267A /* Products */,
+				687B6615E99DD449ADE81D8E /* Pods */,
+				79C389D611FD73C5E75FB523 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93E4B94A1E3A12B800E4267A /* Build configuration list for PBXNativeTarget "Dictate" */;
 			buildPhases = (
+				F76608C56E55DD7459CF3AC1 /* [CP] Check Pods Manifest.lock */,
 				93E4B91E1E3A12B700E4267A /* Sources */,
 				93E4B91F1E3A12B700E4267A /* Frameworks */,
 				93E4B9201E3A12B700E4267A /* Resources */,
+				11F34C8BA855DC09BA03023B /* [CP] Embed Pods Frameworks */,
+				2B9760DD4725F14C5BF2EE93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93E4B94D1E3A12B800E4267A /* Build configuration list for PBXNativeTarget "DictateTests" */;
 			buildPhases = (
+				9C5C34CC7C4EAD6679CD67CF /* [CP] Check Pods Manifest.lock */,
 				93E4B9321E3A12B700E4267A /* Sources */,
 				93E4B9331E3A12B700E4267A /* Frameworks */,
 				93E4B9341E3A12B700E4267A /* Resources */,
+				0A805D6DBEEE75DDBC19FF3E /* [CP] Embed Pods Frameworks */,
+				1A04439BD1A9386DED8F8739 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93E4B9501E3A12B800E4267A /* Build configuration list for PBXNativeTarget "DictateUITests" */;
 			buildPhases = (
+				C2471807FD6978FB400BD5B4 /* [CP] Check Pods Manifest.lock */,
 				93E4B93D1E3A12B700E4267A /* Sources */,
 				93E4B93E1E3A12B700E4267A /* Frameworks */,
 				93E4B93F1E3A12B700E4267A /* Resources */,
+				430220758C062D19381CFE0D /* [CP] Embed Pods Frameworks */,
+				F6AB33C129773A62EE0417B5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A805D6DBEEE75DDBC19FF3E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DictateTests/Pods-DictateTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11F34C8BA855DC09BA03023B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dictate/Pods-Dictate-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1A04439BD1A9386DED8F8739 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DictateTests/Pods-DictateTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B9760DD4725F14C5BF2EE93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Dictate/Pods-Dictate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		430220758C062D19381CFE0D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DictateUITests/Pods-DictateUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C5C34CC7C4EAD6679CD67CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2471807FD6978FB400BD5B4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F6AB33C129773A62EE0417B5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DictateUITests/Pods-DictateUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F76608C56E55DD7459CF3AC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93E4B91E1E3A12B700E4267A /* Sources */ = {
@@ -413,10 +600,12 @@
 		};
 		93E4B94B1E3A12B800E4267A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37124BB5B901A4728F043314 /* Pods-Dictate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
 				INFOPLIST_FILE = Dictate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.Dictate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -426,10 +615,12 @@
 		};
 		93E4B94C1E3A12B800E4267A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8546639B7D52DFDA037AF50A /* Pods-Dictate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
 				INFOPLIST_FILE = Dictate/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.Dictate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -439,6 +630,7 @@
 		};
 		93E4B94E1E3A12B800E4267A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6B5465FC85B84C253DB0694 /* Pods-DictateTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +646,7 @@
 		};
 		93E4B94F1E3A12B800E4267A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32BE3ABE90C3B53CA548B9AE /* Pods-DictateTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +662,7 @@
 		};
 		93E4B9511E3A12B800E4267A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98906972CA068FC5981AC630 /* Pods-DictateUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
@@ -483,6 +677,7 @@
 		};
 		93E4B9521E3A12B800E4267A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B41F6893A5400551EB1F94B /* Pods-DictateUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
