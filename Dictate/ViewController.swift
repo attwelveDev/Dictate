@@ -10,7 +10,7 @@ import UIKit
 import TesseractOCR
 import AVFoundation
 
-var language = "vi-VN"
+var language = "eng"
 
 class ViewController: UIViewController, G8TesseractDelegate {
 
