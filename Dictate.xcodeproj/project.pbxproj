@@ -10,6 +10,7 @@
 		1EB07C5B583A186B9C4DFFC8 /* Pods_Dictate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */; };
 		2AA78A6CDEE6FB49F7028EB0 /* Pods_DictateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB0C17DD1D012FC05272A5 /* Pods_DictateUITests.framework */; };
 		5F7F436668669D5FDA1D66DA /* Pods_DictateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */; };
+		93309A4C1E3B02810096E192 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93309A4B1E3B02810096E192 /* AVFoundation.framework */; };
 		93E4B9261E3A12B700E4267A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B9251E3A12B700E4267A /* AppDelegate.swift */; };
 		93E4B9281E3A12B700E4267A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B9271E3A12B700E4267A /* ViewController.swift */; };
 		93E4B92B1E3A12B700E4267A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E4B9291E3A12B700E4267A /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dictate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8546639B7D52DFDA037AF50A /* Pods-Dictate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dictate/Pods-Dictate.release.xcconfig"; sourceTree = "<group>"; };
 		86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DictateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93309A4B1E3B02810096E192 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		93E4B9221E3A12B700E4267A /* Dictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E4B9251E3A12B700E4267A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93E4B9271E3A12B700E4267A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93309A4C1E3B02810096E192 /* AVFoundation.framework in Frameworks */,
 				1EB07C5B583A186B9C4DFFC8 /* Pods_Dictate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +108,7 @@
 		79C389D611FD73C5E75FB523 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				93309A4B1E3B02810096E192 /* AVFoundation.framework */,
 				79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */,
 				86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */,
 				9EAB0C17DD1D012FC05272A5 /* Pods_DictateUITests.framework */,
@@ -709,6 +713,7 @@
 				93E4B94C1E3A12B800E4267A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93E4B94D1E3A12B800E4267A /* Build configuration list for PBXNativeTarget "DictateTests" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +722,7 @@
 				93E4B94F1E3A12B800E4267A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		93E4B9501E3A12B800E4267A /* Build configuration list for PBXNativeTarget "DictateUITests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +731,7 @@
 				93E4B9521E3A12B800E4267A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
