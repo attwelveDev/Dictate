@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,39 +19,50 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-YE-Om7">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kjr-tm-eef">
-                                <rect key="frame" x="308.5" y="317" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="C5A-a0-hEF"/>
-                                    <constraint firstAttribute="width" constant="50" id="E4S-Sv-IZW"/>
-                                </constraints>
-                                <state key="normal" image="pause"/>
-                                <connections>
-                                    <action selector="revertBTNColour:" destination="BYZ-38-t0r" eventType="touchDown" id="Yzr-bi-IiG"/>
-                                    <action selector="stopMotion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gsU-yI-fyE"/>
-                                </connections>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YAD-RZ-R4S">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="411"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Nxt-ox-4wQ">
+                                <rect key="frame" x="16" y="453.5" width="288" height="72.5"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MWv-Fs-vaF">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="2"/>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyzing image..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsE-Qj-sV1">
+                                        <rect key="frame" x="74.5" y="2" width="139.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwD-L6-dTj">
+                                        <rect key="frame" x="119" y="22.5" width="50" height="50"/>
+                                        <state key="normal" image="play"/>
+                                        <connections>
+                                            <action selector="playPauseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Flf-ma-V4g"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="eiO-YE-Om7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3JX-uj-bdr"/>
-                            <constraint firstItem="eiO-YE-Om7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="SJi-yc-XIF"/>
-                            <constraint firstItem="eiO-YE-Om7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="clC-9q-OEU"/>
-                            <constraint firstItem="eiO-YE-Om7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="jQR-9Z-yv1"/>
-                            <constraint firstItem="Kjr-tm-eef" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jwY-ms-uYo"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Kjr-tm-eef" secondAttribute="bottom" constant="8" id="mJT-lT-t49"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YAD-RZ-R4S" secondAttribute="bottom" constant="157" id="7SP-J6-50r"/>
+                            <constraint firstItem="YAD-RZ-R4S" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="DnK-6r-Y7r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="YAD-RZ-R4S" secondAttribute="trailing" constant="-16" id="TZM-f1-a0r"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Nxt-ox-4wQ" secondAttribute="bottom" constant="42" id="c1x-WC-ERx"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Nxt-ox-4wQ" secondAttribute="leading" id="fRl-AI-JFW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Nxt-ox-4wQ" secondAttribute="trailing" id="h06-Hw-5Mp"/>
+                            <constraint firstItem="YAD-RZ-R4S" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="wfy-l3-wYc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="cameraView" destination="eiO-YE-Om7" id="T31-fV-wpp"/>
-                        <outlet property="pause" destination="Kjr-tm-eef" id="Aqy-rC-31v"/>
+                        <outlet property="analyzeLabel" destination="gsE-Qj-sV1" id="C5M-JH-BDa"/>
+                        <outlet property="playPauseButton" destination="FwD-L6-dTj" id="aBe-9m-PGk"/>
+                        <outlet property="progress" destination="MWv-Fs-vaF" id="6os-g6-Qs0"/>
+                        <outlet property="snappedImageView" destination="YAD-RZ-R4S" id="QQq-Ej-cc9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -59,6 +71,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pause" width="50" height="50"/>
+        <image name="play" width="50" height="50"/>
     </resources>
 </document>
