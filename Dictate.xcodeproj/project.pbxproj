@@ -10,6 +10,7 @@
 		1EB07C5B583A186B9C4DFFC8 /* Pods_Dictate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */; };
 		2AA78A6CDEE6FB49F7028EB0 /* Pods_DictateUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EAB0C17DD1D012FC05272A5 /* Pods_DictateUITests.framework */; };
 		5F7F436668669D5FDA1D66DA /* Pods_DictateTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */; };
+		93152F141E3B466A001CA97E /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 93152F131E3B466A001CA97E /* tessdata */; };
 		93309A4C1E3B02810096E192 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 93309A4B1E3B02810096E192 /* AVFoundation.framework */; };
 		93E4B9261E3A12B700E4267A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B9251E3A12B700E4267A /* AppDelegate.swift */; };
 		93E4B9281E3A12B700E4267A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93E4B9271E3A12B700E4267A /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		79A232878BFC56F0A30EA0E1 /* Pods_Dictate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dictate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8546639B7D52DFDA037AF50A /* Pods-Dictate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dictate.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dictate/Pods-Dictate.release.xcconfig"; sourceTree = "<group>"; };
 		86CFB549E39CCF13B0E4A234 /* Pods_DictateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DictateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93152F131E3B466A001CA97E /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		93309A4B1E3B02810096E192 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		93E4B9221E3A12B700E4267A /* Dictate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dictate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E4B9251E3A12B700E4267A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,7 @@
 		93E4B9241E3A12B700E4267A /* Dictate */ = {
 			isa = PBXGroup;
 			children = (
+				93152F131E3B466A001CA97E /* tessdata */,
 				93E4B9251E3A12B700E4267A /* AppDelegate.swift */,
 				93E4B9271E3A12B700E4267A /* ViewController.swift */,
 				93E4B9291E3A12B700E4267A /* Main.storyboard */,
@@ -247,6 +250,7 @@
 					93E4B9211E3A12B700E4267A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 8NBK23EYP2;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					93E4B9351E3A12B700E4267A = {
@@ -289,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93E4B9301E3A12B700E4267A /* LaunchScreen.storyboard in Resources */,
+				93152F141E3B466A001CA97E /* tessdata in Resources */,
 				93E4B92D1E3A12B700E4267A /* Assets.xcassets in Resources */,
 				93E4B92B1E3A12B700E4267A /* Main.storyboard in Resources */,
 			);
@@ -550,7 +555,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -595,7 +600,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -612,7 +617,7 @@
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Dictate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.Dictate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -628,7 +633,7 @@
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Dictate/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.Dictate";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -643,6 +648,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DictateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.DictateTests";
@@ -659,6 +665,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DictateTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.DictateTests";
@@ -674,6 +681,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DictateUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.DictateUITests";
@@ -689,6 +697,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 8NBK23EYP2;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = DictateUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Aaron-Nguyen.DictateUITests";

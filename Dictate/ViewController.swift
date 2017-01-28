@@ -16,11 +16,82 @@ class ViewController: UIViewController, G8TesseractDelegate {
 
     @IBOutlet weak var cameraView: UIView!
     
+    func scaleImage(image: UIImage, maxDimension: CGFloat) -> UIImage {
+        
+        var scaledSize = CGSize(width: maxDimension, height: maxDimension)
+        var scaleFactor: CGFloat
+        
+        if image.size.width > image.size.height {
+            scaleFactor = image.size.height / image.size.width
+            scaledSize.width = maxDimension
+            scaledSize.height = scaledSize.width * scaleFactor
+        } else {
+            scaleFactor = image.size.width / image.size.height
+            scaledSize.height = maxDimension
+            scaledSize.width = scaledSize.height * scaleFactor
+        }
+        
+        UIGraphicsBeginImageContext(scaledSize)
+        image.draw(in: CGRect(x: 0, y: 0, width: scaledSize.width, height: scaledSize.height))
+        let scaledImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return scaledImage!
+    }
+    
+    var activityIndicator = UIActivityIndicatorView()
+    
+    func addActivityIndicator() {
+        activityIndicator = UIActivityIndicatorView(frame: view.bounds)
+        activityIndicator.activityIndicatorViewStyle = .whiteLarge
+        activityIndicator.backgroundColor = UIColor(white: 0, alpha: 0.25)
+        activityIndicator.startAnimating()
+        view.addSubview(activityIndicator)
+    }
+    
+    func removeActivityIndicator() {
+        activityIndicator.removeFromSuperview()
+        //activityIndicator = nil
+    }
+    
+    var theBool: Bool = true {
+        didSet {
+            if theBool == false {
+                captureSession.stopRunning()
+                if let tesseract = G8Tesseract(language: "\(selectedLanguage)") {
+                    
+                    print("Thru to this stage")
+                    
+                    UIGraphicsBeginImageContextWithOptions(cameraView.bounds.size, true, 0)
+                    cameraView.drawHierarchy(in: cameraView.bounds, afterScreenUpdates: true)
+                
+                    let scaledImage = scaleImage(image: UIGraphicsGetImageFromCurrentImageContext()!, maxDimension: 640)
+                    
+                    tesseract.delegate = self
+                    tesseract.image = scaleImage(image: UIGraphicsGetImageFromCurrentImageContext()!, maxDimension: 640)
+                    
+                    if tesseract.image == scaledImage && tesseract.image == scaleImage(image: UIGraphicsGetImageFromCurrentImageContext()!, maxDimension: 640) {
+                        print("Correct")
+                    }
+                    
+                    tesseract.recognize()
+                    
+                }
+            } else {
+                captureSession.startRunning()
+            }
+        }
+    }
+    
     @IBOutlet weak var pause: UIButton!
     @IBAction func stopMotion(_ sender: Any) {
         print("pressed")
         pause.tintColor = UIColor.lightGray
+        
+        theBool = !theBool
+        
     }
+    
     @IBAction func revertBTNColour(_ sender: Any) {
         pause.tintColor = UIColor.black
     }
@@ -32,24 +103,25 @@ class ViewController: UIViewController, G8TesseractDelegate {
     }()
     
     var captureSession = AVCaptureSession()
-    var sessionOutput = AVCaptureStillImageOutput()
+    var sessionOutput = AVCapturePhotoOutput() //AVCapturePhotoOutput
     var previewLayer = AVCaptureVideoPreviewLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
-        for device in devices! {
+        //let devices = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo)
+        let devices = AVCaptureDeviceDiscoverySession(deviceTypes: [AVCaptureDeviceType.builtInDuoCamera, AVCaptureDeviceType.builtInTelephotoCamera,AVCaptureDeviceType.builtInWideAngleCamera], mediaType: AVMediaTypeVideo, position: AVCaptureDevicePosition.unspecified)
+        for device in (devices?.devices)! {
             if (device as AnyObject).position == AVCaptureDevicePosition.back {
                 
                 do {
                     
-                    let input = try AVCaptureDeviceInput(device: device as! AVCaptureDevice)
+                    let input = try AVCaptureDeviceInput(device: device)
                     if captureSession.canAddInput(input) {
                         
                         captureSession.addInput(input)
-                        sessionOutput.outputSettings = [AVVideoCodecKey : AVVideoCodecJPEG]
+                        //sessionOutput.outputSettings = [AVVideoCodecKey : AVVideoCodecJPEG]
                         
                         if captureSession.canAddOutput(sessionOutput) {
                             
@@ -77,17 +149,7 @@ class ViewController: UIViewController, G8TesseractDelegate {
                 print("No device")
             }
         }
-        
-        if let tesseract = G8Tesseract(language: "\(selectedLanguage)") {
-            tesseract.delegate = self
-            tesseract.image = UIImage(named: "\(sessionOutput)")?.g8_blackAndWhite()
-            tesseract.recognize()
-            
-            let recognizedText = tesseract.recognizedText
-            
-            print(recognizedText!)
-        }
-        
+
         pause.tintColor = UIColor.black
         
     }
@@ -98,15 +160,25 @@ class ViewController: UIViewController, G8TesseractDelegate {
     }
 
     func progressImageRecognition(for tesseract: G8Tesseract!) {
+        addActivityIndicator()
         print("Overall process: \(tesseract.progress)%")
-        if tesseract.progress == 100 {
+        if tesseract.progress == 92 {
             let synth = AVSpeechSynthesizer()
-            let utterance = AVSpeechUtterance(string: "\(tesseract.recognizedText)")
-            utterance.rate = 0.5
+            let utterance = AVSpeechUtterance(string: "\(tesseract.recognizedText!)")
+            utterance.rate = 0.3
             utterance.voice = AVSpeechSynthesisVoice(language: selectedLanguage)
             synth.speak(utterance)
+            
+            let recognizedText = tesseract.recognizedText
+            
+            if recognizedText != nil {
+                print(recognizedText!)
+            }
+            removeActivityIndicator()
+            UIGraphicsEndImageContext()
         }
     }
 
+    
 }
 
